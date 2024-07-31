@@ -431,6 +431,9 @@ Existing callers keep the current behavior by constructing bundles with
     `NonIdentityPallasPoint` and `NonIdentityPallasPoint::from_bytes`,
     `MerklePath::dummy`, and `MerkleHashOrchard::inner`.
 
+### Added
+- `orchard::keys::FullViewingKey::from_sk_ak()` behind the `unstable-frost` flag.
+
 ## [0.13.0] - 2026-04-22
 
 ### Added
