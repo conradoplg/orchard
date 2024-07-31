@@ -751,6 +751,17 @@ pub struct SigningParts {
     alpha: pallas::Scalar,
 }
 
+impl SigningParts {
+    /// Return the spend validating key for this action.
+    pub fn ak(&self) -> &SpendValidatingKey {
+        return &self.ak;
+    }
+    /// Return the randomization for this action.
+    pub fn alpha(&self) -> pallas::Scalar {
+        return self.alpha;
+    }
+}
+
 /// Marker for an unauthorized bundle with no signatures.
 #[derive(Clone, Debug)]
 pub struct Unauthorized {
