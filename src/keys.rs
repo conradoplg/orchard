@@ -306,6 +306,17 @@ pub struct FullViewingKey {
     rivk: CommitIvkRandomness,
 }
 
+impl FullViewingKey {
+    /// Create FVK from the given sk and ak.
+    pub fn from_sk_ak(sk: &SpendingKey, ak: SpendValidatingKey) -> Self {
+        FullViewingKey {
+            ak,
+            nk: sk.into(),
+            rivk: sk.into(),
+        }
+    }
+}
+
 impl From<&SpendingKey> for FullViewingKey {
     fn from(sk: &SpendingKey) -> Self {
         FullViewingKey {
