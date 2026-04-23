@@ -432,7 +432,9 @@ Existing callers keep the current behavior by constructing bundles with
     `MerklePath::dummy`, and `MerkleHashOrchard::inner`.
 
 ### Added
-- `orchard::keys::FullViewingKey::from_sk_ak()` behind the `unstable-frost` flag.
+- `orchard::keys::FullViewingKey::from_sk_ak_incompatible_with_quantum_recoverability_and_will_be_removed()`,
+  behind the `unstable-frost` flag. Intended *ONLY FOR EXPERIMENTAL USE* with
+  FROST; see the doc comment for further caveats.
 
 ## [0.13.0] - 2026-04-22
 
